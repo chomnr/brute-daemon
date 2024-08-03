@@ -46,7 +46,7 @@ pub async fn start_ftp_server() -> anyhow::Result<()> {
         fs::create_dir_all(path).expect("Failed to create directory");
     }
 
-    info!("FTP server listening on port 22");
+    info!("FTP server listening on port 21");
     let server = libunftp::ServerBuilder::with_authenticator(
         Box::new(move || { unftp_sbe_fs::Filesystem::new(get_ftp_path())}),
         std::sync::Arc::new(BruteAuthenticator{})
