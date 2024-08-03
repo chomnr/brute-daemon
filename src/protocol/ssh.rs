@@ -53,7 +53,6 @@ impl russh::server::Handler for SshSession {
         let binding = self.ip.unwrap();
         let mut ip = binding.ip().to_string();
         let endpoint = env::var("ADD_ATTACK_ENDPOINT")?;
-        ip = "73.148.135.111".to_string();
         if !ip.eq("127.0.0.1") {
             info!("Recieved an auth request sending to {}", endpoint);
             payload::Payload::post(&user, &password, &ip, "SSH").await?;
