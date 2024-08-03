@@ -4,3 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+tokio = { version = "1.39.2", features = ["full"] }
+async-trait = "0.1.81"
+dotenvy = "0.15.7"
+russh = "0.44.0"

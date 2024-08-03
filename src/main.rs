@@ -1,3 +1,12 @@
+pub mod protocol;
+
+//////////////////////////
+// SUPPORTED PROTOCOLS //
+////////////////////////
+///////////////
+// SSH, FTP //
+/////////////
+
 fn main() {
     println!("Hello, world!");
 }
