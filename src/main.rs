@@ -1,4 +1,5 @@
-pub mod protocol;
+mod protocol;
+mod payload;
 
 //////////////////////////
 // SUPPORTED PROTOCOLS //
@@ -7,6 +8,7 @@ pub mod protocol;
 // SSH, FTP //
 /////////////
 
-fn main() {
+#[tokio::main]
+async fn main() {
     println!("Hello, world!");
 }
